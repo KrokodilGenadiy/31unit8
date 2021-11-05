@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/i1"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/bus"
+        android:transitionName="image_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/i2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <TextView
+        android:id="@+id/t1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Общественный транспорт"
+        android:transitionName="transition_text"
+        app:layout_constraintEnd_toEndOf="@id/i1"
+        app:layout_constraintStart_toStartOf="@id/i1"
+        app:layout_constraintTop_toBottomOf="@id/i1" />
+
+    <ImageView
+        android:id="@+id/i2"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/subway"
+        android:transitionName="image_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/i1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <TextView
+        android:id="@+id/t2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Метро"
+        android:transitionName="transition_text"
+        app:layout_constraintEnd_toEndOf="@id/i2"
+        app:layout_constraintStart_toStartOf="@id/i2"
+        app:layout_constraintTop_toBottomOf="@id/i2" />
+
+    <ImageView
+        android:id="@+id/i3"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/walk"
+        android:transitionName="image_name"
+        app:layout_constraintEnd_toStartOf="@id/i4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barrier1" />
+
+    <TextView
+        android:id="@+id/t3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Пешком"
+        android:transitionName="transition_text"
+        app:layout_constraintEnd_toEndOf="@id/i3"
+        app:layout_constraintStart_toStartOf="@id/i3"
+        app:layout_constraintTop_toBottomOf="@id/i3" />
+
+    <ImageView
+        android:id="@+id/i4"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/dutch_bike"
+        android:transitionName="image_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/i3"
+        app:layout_constraintTop_toBottomOf="@id/barrier1" />
+
+    <TextView
+        android:id="@+id/t4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Велосипед"
+        android:transitionName="transition_text"
+        app:layout_constraintEnd_toEndOf="@id/i4"
+        app:layout_constraintStart_toStartOf="@id/i4"
+        app:layout_constraintTop_toBottomOf="@id/i4" />
+
+    <ImageView
+        android:id="@+id/i5"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/city_car"
+        android:transitionName="image_name"
+        app:layout_constraintEnd_toStartOf="@id/i6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barrier2" />
+
+    <TextView
+        android:id="@+id/t5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Автомобиль"
+        android:transitionName="transition_text"
+        app:layout_constraintEnd_toEndOf="@id/i5"
+        app:layout_constraintStart_toStartOf="@id/i5"
+        app:layout_constraintTop_toBottomOf="@id/i5" />
+
+    <ImageView
+        android:id="@+id/i6"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/airplane"
+        android:transitionName="image_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/i5"
+        app:layout_constraintTop_toBottomOf="@id/barrier2" />
+
+    <TextView
+        android:id="@+id/t6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Самолет"
+        android:transitionName="transition_text"
+        app:layout_constraintEnd_toEndOf="@id/i6"
+        app:layout_constraintStart_toStartOf="@id/i6"
+        app:layout_constraintTop_toBottomOf="@id/i6" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="i1,i2" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="i3,i4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
